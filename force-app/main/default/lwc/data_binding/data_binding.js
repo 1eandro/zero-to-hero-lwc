@@ -39,4 +39,18 @@ export default class Data_binding extends LightningElement {
   trackHandlerWithSpread(event) {
     this.spreadAddress = { ...this.address, city: event.target.value };
   }
+
+  // Getters
+
+  users = ["Batman", "Iron Man", "Robin"];
+  num1 = 10;
+  num2 = 23;
+
+  get firstUser() {
+    return this.users[0];
+  }
+
+  get multiply() {
+    return this.num1 * this.num2;
+  }
 }
