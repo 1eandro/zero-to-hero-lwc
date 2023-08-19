@@ -10,9 +10,16 @@ export default class LifeCycleParent extends LightningElement {
     console.log("Parent: connectedCallback Phase");
   }
 
+  // It is called whenever something property (like name) is updated
   renderedCallback() {
     console.log("Parent: renderedCallback Phase");
     let someDiv = this.template.querySelector(".some-div");
     console.log("Parent: Now I can find some div: ", someDiv);
+  }
+
+  name;
+
+  changeHandler(event) {
+    this.name = event.target.value;
   }
 }
