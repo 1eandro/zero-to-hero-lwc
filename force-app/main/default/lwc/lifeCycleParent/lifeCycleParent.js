@@ -13,6 +13,6 @@ export default class LifeCycleParent extends LightningElement {
   renderedCallback() {
     console.log("Parent: renderedCallback Phase");
     let someDiv = this.template.querySelector(".some-div");
-    console.log("Now I can find some div: ", someDiv);
+    console.log("Parent: Now I can find some div: ", someDiv);
   }
 }
