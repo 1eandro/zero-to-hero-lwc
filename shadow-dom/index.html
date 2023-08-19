@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Shadow DOM</title>
+    <style>
+        p{
+            background-color:lightblue;
+            padding: 1em;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            border: 1px solid darkcyan;
+            color: darkcyan;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>Thanks for choosing Zero to Hero Course</p>
+    </div>
+    <div class="" id="host"></div>
+    <button onclick="fetchPtag()">
+        Click me!
+    </button>
+
+    <script>
+        const elem = document.querySelector('#host')
+        const shadowRoot = elem.attachShadow({mode:'open'})
+        shadowRoot.innerHTML = '<p>I am shadow DOM</p>'
+
+        function fetchPtag(){
+            // Due the shadow DOM, this query will fetch only the DOM, not the shadow DOM
+            let tags = document.querySelectorAll('p')
+            console.log(tags)
+        }
+    </script>
+</body>
+</html>
