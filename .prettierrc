@@ -3,8 +3,8 @@
   "useTabs": false,
   "overrides": [
     {
-        "files": "*.html",
-        "options": { "parser": "lwc" }
+      "files": "*.html",
+      "options": { "parser": "lwc" }
     }
-]
+  ]
 }

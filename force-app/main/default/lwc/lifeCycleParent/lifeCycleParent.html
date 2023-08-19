@@ -1,14 +1,27 @@
 <template>
   <lightning-card title="Lifecycle Hook Parent Card">
-    <div class="slds-m-around_x-small">
-      <div class="some-div">On Parent: Something goes here</div>
-    </div>
-    <div class="slds-m-around_x-small">
-      <input type="text" onkeyup={changeHandler} />
-      <div class="slds-m-bottom_medium">
-        <span class="my-class">{name}</span>
-      </div>
-    </div>
+    <template if:false={isChildVisible}>
+      <lightning-button
+        variant="brand"
+        label="Show Child"
+        title="Show Child"
+        onclick={handleShow}
+        class="slds-m-left_x-small"
+      >
+      </lightning-button>
+    </template>
+    <template if:true={isChildVisible}>
+      <lightning-button
+        variant="brand"
+        label="Hide Child"
+        title="Hide Child"
+        onclick={handleHide}
+        class="slds-m-left_x-small"
+      >
+      </lightning-button>
+    </template>
   </lightning-card>
-  <c-life-cycle-child></c-life-cycle-child>
+  <template if:true={isChildVisible}>
+    <c-life-cycle-child></c-life-cycle-child>
+  </template>
 </template>
