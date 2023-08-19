@@ -1,0 +1,24 @@
+.my-float {
+  float: right;
+  clear: right;
+}
+
+.my-overflow {
+  overflow: hidden;
+}
+
+.outer {
+  position: relative;
+  border: 1px solid red;
+  display: block;
+  margin: 0px auto;
+  height: 100px; /* Set the desired height */
+  max-height: 100%; /* Ensure inner div doesn't exceed outer div */
+}
+
+.inner {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: 20px;
+}
