@@ -1,0 +1,22 @@
+p {
+  color: darkcyan;
+  font-size: 30px;
+  border: 1px solid red;
+}
+
+.lacraia {
+  color: pink;
+  font-size: 20px;
+}
+
+.lacraia:hover {
+  font-size: 50px;
+  color: red;
+}
+
+.lacraia {
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
