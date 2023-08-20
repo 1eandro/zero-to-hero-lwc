@@ -1,5 +1,6 @@
 <template>
   <div class="slds-var-m-around_medium">
+    <!-- Example of Simple Data -->
     <c-p2c-alert-component
       message="This data was passed from the parent!"
       card-heading="Heading title set on the parent!"
@@ -7,9 +8,30 @@
       is-valid="false"
     ></c-p2c-alert-component>
   </div>
+
+  <!-- Example of Complex Non Primitive Data -->
   <div class="slds-var-m-around_medium">
     <c-p2c-carousel-component
       carousel-details={carouselData}
     ></c-p2c-carousel-component>
+  </div>
+
+  <!-- Example of Data passing via action on parent -->
+  <div class="slds-var-m-around_medium">
+    <lightning-card title="P2C on action">
+      <div class="slds-var-p-around_small">
+        <lightning-input
+          type="number"
+          label="Enter percentage"
+          onkeyup={changeHandler}
+          value={percentage}
+        ></lightning-input>
+        <div class="slds-var-m-top_medium">
+          <c-p2c-progress-component
+            progress-value={percentage}
+          ></c-p2c-progress-component>
+        </div>
+      </div>
+    </lightning-card>
   </div>
 </template>
