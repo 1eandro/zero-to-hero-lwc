@@ -1,6 +1,23 @@
 <template>
+  <!-- Example of calling child method from parent -->
   <div class="slds-var-m-around_medium">
-    <!-- Example of Simple Data -->
+    <lightning-card title="Calling child method">
+      <div class="slds-var-p-around_small slds-var-m-top_medium">
+        <lightning-button
+          variant="brand"
+          label="Reset Slider"
+          onclick={handleClick}
+        ></lightning-button>
+      </div>
+
+      <div class="slds-var-p-around_small slds-var-m-top_medium">
+        <c-p2c-slider-component> </c-p2c-slider-component>
+      </div>
+    </lightning-card>
+  </div>
+
+  <!-- Example of Simple Data -->
+  <div class="slds-var-m-around_medium">
     <c-p2c-alert-component
       message="This data was passed from the parent!"
       card-heading="Heading title set on the parent!"
