@@ -9,6 +9,9 @@ export default class LifeCycleChild extends LightningElement {
   connectedCallback() {
     console.log("Child: connectedCallback Phase");
     window.addEventListener("click", this.handleClick);
+    throw new Error(
+      "A error have occurred in the connectedCallback of the Child"
+    );
   }
 
   renderedCallback() {

@@ -32,4 +32,9 @@ export default class LifeCycleParent extends LightningElement {
   handleHide() {
     this.isChildVisible = false;
   }
+
+  errorCallback(error, stack) {
+    console.log("error.message:", error.message);
+    console.log("stack", stack);
+  }
 }
