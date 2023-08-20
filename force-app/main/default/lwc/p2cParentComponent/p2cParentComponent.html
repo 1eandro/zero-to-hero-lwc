@@ -1,8 +1,15 @@
 <template>
-  <c-p2c-alert-component
-    message="This data was passed from the parent!"
-    card-heading="Heading title set on the parent!"
-    number="20"
-    is-valid="false"
-  ></c-p2c-alert-component>
+  <div class="slds-var-m-around_medium">
+    <c-p2c-alert-component
+      message="This data was passed from the parent!"
+      card-heading="Heading title set on the parent!"
+      number="20"
+      is-valid="false"
+    ></c-p2c-alert-component>
+  </div>
+  <div class="slds-var-m-around_medium">
+    <c-p2c-carousel-component
+      carousel-details={carouselData}
+    ></c-p2c-carousel-component>
+  </div>
 </template>
